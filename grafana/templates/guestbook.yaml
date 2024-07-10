@@ -3,12 +3,10 @@ kind: Application
 metadata:
   name: guestbook
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: argocd
-    server: {{ .Values.spec.destination.server }}
+    server: 'https://kubernetes.default.svc'
   project: default
   source:
     path: guestbook
