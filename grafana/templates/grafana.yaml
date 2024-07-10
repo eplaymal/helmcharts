@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana
+spec:
+  source:
+    path: grafana
+    repoURL: https://github.com/javier2419/prometheus-helm.git
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  project: default
