@@ -1,0 +1,15 @@
+repoServer:
+  additionalApplications:
+    - name: grafana
+      namespace: default
+      project: default
+      source:
+        repoURL: 'https://github.com/javier2419/prometheus-helm.git'
+        targetRevision: HEAD
+        path: grafana
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: default
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true

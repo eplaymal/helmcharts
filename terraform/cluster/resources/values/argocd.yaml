@@ -1,0 +1,8 @@
+configs:
+  repositories:
+    test-repo:
+      url: https://github.com/eplaymal/helmcharts.git
+      name: test
+      type: git
+
+extraObjects:
