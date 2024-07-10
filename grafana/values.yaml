@@ -14,7 +14,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
-namespace: "grafana"
+namespace: "default"
 
 serviceAccount:
   # Specifies whether a service account should be created
